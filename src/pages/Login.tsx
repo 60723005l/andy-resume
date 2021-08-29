@@ -6,8 +6,7 @@ import { Button, Input, InputLabel, InputAdornment, FormControl, Typography } fr
 import { CesiumViewer } from "../components/CesiumViewer";
 import { Viewer } from "cesium";
 import EathSpin from "../components/CesiumViewer/src/camera/EathSpin";
-import { withRouter, RouteComponentProps } from "react-router-dom";
-
+import {  RouteComponentProps } from "react-router-dom";
 
 // const { buildModuleUrl } = Cesium
 

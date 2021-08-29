@@ -1,4 +1,3 @@
-// import { FC } from 'react'; 
 import Loading from '../pages/Loading';
 import { RouteItem } from './interface';
 import Loadable from 'react-loadable';
@@ -8,7 +7,19 @@ const Login = Loadable({
     loading: Loading
 })
 const Home = Loadable({
-  loader: () => import('../pages/Home'),
+  loader: () => import('../pages/Home/Home'),
+  loading: Loading
+})
+const About = Loadable({
+  loader: () => import('../pages/Home/About'),
+  loading: Loading
+})
+const Skill = Loadable({
+  loader: () => import('../pages/Home/Skill'),
+  loading: Loading
+})
+const Project = Loadable({
+  loader: () => import('../pages/Home/Project'),
   loading: Loading
 })
 const LoadingPage = Loadable({
@@ -21,7 +32,11 @@ const LoadingPage = Loadable({
   const routes: Array<RouteItem> = [
     {path: '/', exact: true, component: Login},
     {path: '/Loading', exact: true, component: LoadingPage},
-    {path: '/Home', exact: true, component: Home},
+    {path: '/Home', component: Home, routes: [
+      {path: '/Home', exact: true, component: About},
+      {path: '/Home/skill', exact: true, component: Skill},
+      {path: '/Home/project', exact: true, component: Project},
+    ]},
     // {
     //   path: '/:user/demos', component: Demos,
     //   routes:[
