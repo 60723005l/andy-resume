@@ -2,12 +2,8 @@ import React from 'react';
 import { Theme, createStyles, makeStyles, useTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -54,14 +50,14 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-interface ExpCardProps {
+interface IMediaThemeProps {
     title: string
     subtitle: string
     content: string
     image: string
 }
 
-const ExperienceCard = ({title, subtitle, content, image}: ExpCardProps) => {
+const MediaThemeCard = ({title, subtitle, content, image}: IMediaThemeProps) => {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -83,5 +79,5 @@ const ExperienceCard = ({title, subtitle, content, image}: ExpCardProps) => {
   );
 }
 
-export { ExperienceCard as default }
-export type {ExpCardProps}
+export { MediaThemeCard as default }
+export type {IMediaThemeProps}

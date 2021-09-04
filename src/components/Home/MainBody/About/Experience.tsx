@@ -1,9 +1,7 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
 import ThemeBox from "../../../BacisElement/ThemeBox";
-import ExperienceCard, { ExpCardProps } from "./ExperienceCard";
-
-const Informations: Array<ExpCardProps> = [
+import MediaThemeCard, { IMediaThemeProps } from "../../../BacisElement/MediaThemeCard"
+const Informations: Array<IMediaThemeProps> = [
     {
         title: 'GIS工程師',
         subtitle: '杰悉科技股份有限公司',
@@ -27,7 +25,7 @@ const Experience = () =>
         <ThemeBox title="工作經歷">
             {
                 Informations.map( (info, index) => (
-                    <ExperienceCard key={index} {...info} />
+                    <MediaThemeCard key={index} {...info} />
                 ))
             }
         </ThemeBox>
