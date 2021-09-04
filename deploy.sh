@@ -1,1 +1,1 @@
- http-server ./ -p 443
+ http-server ./build -p 443
