@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import { Typography, Badge, Button, Popover, Divider } from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -104,6 +105,7 @@ type Props = {
 
 const PersonalCard = ({onScrollTo}: Props) => {
   const classes = useStyles();
+  const history = useHistory()
   const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
   const targetUrl = `${window.location.origin}/#/Home/Project`
@@ -124,29 +126,13 @@ const PersonalCard = ({onScrollTo}: Props) => {
           <div className={classes.bg2}>
             <div className={classes.exp}>
               <div className={classes.paper}>
-                <Badge badgeContent={3} color="primary">
+                <Badge badgeContent={2} color="primary">
                   <Button variant="contained" color="primary" onClick={() => onScrollTo('exp') }>工作經驗</Button>
                 </Badge>
               </div>
               <div className={classes.paper}>
-                <Badge badgeContent={6} color="primary">
-                <Button variant="contained" color="primary" onClick={() => onScrollTo('exp') } onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose}>參與專案</Button>
-                  <Popover id="mouse-over-popover" open={open} className={classes.popover}
-                  
-                    anchorEl={anchorEl} onClose={handlePopoverClose}
-                    anchorOrigin={{
-                      vertical: 'bottom',
-                      horizontal: 'center',
-                    }}
-                    transformOrigin={{
-                      vertical: 'top',
-                      horizontal: 'center',
-                    }}
-                    disableRestoreFocus
-                  >
-                    <iframe src={targetUrl}></iframe>
-                  </Popover>
-                  
+                <Badge badgeContent={5} color="primary">
+                <Button variant="contained" color="primary" onClick={() => history.push('/Home/project') }>參與專案</Button>
                 </Badge>
               </div>
             </div>

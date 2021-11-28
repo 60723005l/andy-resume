@@ -67,9 +67,9 @@ const useStyles = makeStyles((theme) => ({
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" noWrap>
-                    BlaBlaBla
+                    Andy.Chen
                 </Typography>
-                <Button color="inherit">Login</Button>
+                {/* <Button color="inherit">Login</Button> */}
                 </Toolbar>
             </AppBar>
     )

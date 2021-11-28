@@ -2,6 +2,7 @@ import React from "react";
 import ThemeBox from "../../components/BacisElement/ThemeBox";
 import { makeStyles } from "@material-ui/styles";
 import Frontend from "../../components/Home/MainBody/Skill/Frontend"
+import Backend from "../../components/Home/MainBody/Skill/Backend"
 
 const useStyles = makeStyles(theme=> ({
     root: {
@@ -14,9 +15,7 @@ const Skill = () =>
     return (
         <div className={classes.root}>
             <Frontend />
-            <ThemeBox title="後端">
-                <span>後端</span>
-            </ThemeBox>
+            <Backend />
             <ThemeBox title="其他">
                 <span>其他</span>
             </ThemeBox>
