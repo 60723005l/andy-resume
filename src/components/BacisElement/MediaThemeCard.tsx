@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
             transform: "translate(-50%, 0px)"
         },
       '& > img': {
-          width: "inherit"
+          width: 150
       }
     },
     controls: {
@@ -63,7 +63,7 @@ const MediaThemeCard = ({title, subtitle, content, image}: IMediaThemeProps) => 
 
   return (
     <Card className={classes.root}>
-        <div className={classes.mediaBox}>
+        <div className={classes.mediaBox} >
             <img src={image} />
         </div>
         <div className={classes.details}>
